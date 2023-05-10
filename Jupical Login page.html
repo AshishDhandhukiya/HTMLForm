@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+        <style>
+        
+            .a
+            {
+                text-align: center;
+            }
+            .container-fluid
+            {
+                height: 500px;
+                width: 500px;
+            }
+            .z
+            {
+                color: green;
+            }
+            span
+            {
+                padding-left: 40px;
+            }
+        </style>
+</head>
+<script>
+    function Ashish()
+    {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(document.form.fname.value=="")
+        {
+            alert("Enter Your First Name");
+            document.form.fname.focus();
+            //return false;
+        }
+        if(document.form.lname.value=="")
+        {
+            alert("Enter Your Last Name");
+            document.form.lname.focus();
+        }
+        if(document.form.email.value=="")
+        {
+            alert("Enter Your E-Mail");
+            document.form.email.focus();
+        }
+        if(document.form.pass.value.length < 6)
+        {
+            alert("Enter Your 6 Digites Password");
+            document.form.pass.focus();
+        }
+        if(document.form.dob.value=="")
+        {
+            alert("Enter Your Date Of Birth");
+            document.form.dob.focus();
+        }
+        if(document.form.age.value=="")
+        {
+            alert("Enter Your Age");
+            document.form.age.focus();
+        }
+        if(document.form.pass.value == document.form.cpass.value)
+        {
+            alert("Account Created");
+        }
+        else
+        {
+            alert("Password Not Matching");
+        }
+        
+    }
+</script>
+
+<body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiiab6SZ4ro6_EDVyPN17F4V1hBD-vKo6L4w&usqp=CAU);">
+
+     
+
+
+    <div class="container-fluid ">
+        <h1 align="center" b><b><i><u>LOGIN PAGE</u></i></b></h1>
+
+        <form name="form" action="" method="post" onsubmit="return Ashish()">
+            <div class="form-group">
+                <label><b><i><u>FIRST NAME :</u></i></b></label>
+                <input type="text" class="form-control" name="fname" placeholder="Enter Your First Name">
+            </div><br>
+
+            <div class="form-group">
+                <label><b><i><u>LAST NAME :</u></i></b></label>
+                <input type="text" class="form-control" name="lname" placeholder="Enter Your Last Name">
+            </div><br>
+            
+            <div class="form-group">
+                <label><b><i><u>E-MAIL :</u></i></b></label>
+                <input type="text" name="email" class="form-control" placeholder="Enter Your E-Mail"><br>
+
+            </div>
+            <div class="form-group">
+                <label><b><i><u>PASWORD :</u></i></b></label>
+                <input type="password" name="pass" class="form-control" placeholder="Enter Your Password">
+            </div><br>
+
+            <div class="form-group">
+                <label><b><i><u>CONFIRM PASWORD :</u></i></b></label>
+                <input type="password" name="cpass" class="form-control" placeholder="Enter Your Confirm Password">
+            </div><br>
+            
+            <div class="form-group">
+                <label><b><i><u>DATE OF BIRTH :</u></i></b></label>
+                <input type="date" name="date" class="form-control" placeholder="Enter Your Birth Date">
+            </div><br>
+
+            <div class="form-group">
+                <label><b><i><u>AGE :</u></i></b></label>
+                <input type="number" name="age" class="form-control" placeholder="Enter Your Age">
+            </div>
+            
+            <div>
+                <table>
+                    <tr>
+                        <td>MALE</td><td>:</td><td><input type="radio" name="male"></td>
+                    </tr>
+                    <tr>
+                        <td>FEMALE</td><td>:</td><td><input type="radio" name="male"></td><br>
+                    </tr>
+                    <td>OTHER</td><td>:</td><td><input type="radio" name="male"></td>
+                </table>
+            </div><br>
+
+            <div>
+                <input type="checkbox" name="check"><span><b><i><u>Accpets all terms & condition</u></i></b></span>
+            </div><br>
+
+            <div class="z form-group">
+                <input type="SUBMIT" name="SUBMIT" class="form-control">
+            </div><br>
+            <div>
+                <label ><b><i><u>Already Have An Account ?</u></i></b><a href="#"><b><i><u>Login in</u></i></b></a></label>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
